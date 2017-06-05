@@ -88,7 +88,8 @@ class MultiBoxEncoder(object):
                 all_boxes.append(label_boxes[i])
                 all_labels.append(label)
                 all_scores.append(label_scores[i])
-        if len(all_boxes) != 0 :
-            return np.stack(all_boxes), np.stack(all_labels), np.stack(all_scores)
-        else:
-            return np.zeros(0),np.zeros(0),np.zeros(0)
+        if all_boxes:
+            return (np.stack(all_boxes),
+                    np.stack(all_labels),
+                    np.stack(all_scores))
+        return np.empty(0), np.empty(0), np.empty(0)
