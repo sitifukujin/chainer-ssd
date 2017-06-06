@@ -93,4 +93,4 @@ class MultiBoxEncoder(object):
                     np.stack(all_labels), \
                     np.stack(all_scores)
         else:
-            return np.empty(0), np.empty(0), np.empty(0)
+            return np.empty((0,4)), np.empty((0,4)), np.empty((0,4))
