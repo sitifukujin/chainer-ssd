@@ -8,3 +8,4 @@ from lib.ssd import SSD512  # NOQA
 from lib.transforms import preproc_for_test  # NOQA
 from lib.transforms import preproc_for_train  # NOQA
 from lib.voc import VOCDataset  # NOQA
+from lib.voc_eval import voc_eval  # NOQA
