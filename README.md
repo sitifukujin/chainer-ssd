@@ -8,7 +8,7 @@ Pascal VOC2007 Test
 | Method | Original | Test only (model conversion) | Train and Test |
 |:-:|:-:|:-:|:-:|
 | SSD300 | 77.6 % | 77.5 % | 77.3 % |
-| SSD512 | 79.5 % [3] | 79.6 % | 80.4% [^SSD512] |
+| SSD512 | 79.5 % [3] | 79.6 % | 80.4% [1](#SSD512 train environment) |
 
 ## Requirements
 
@@ -89,11 +89,11 @@ $ ./train.py --init VGG_ILSVRC_16_fc_reduced.npz --train 2007-trainval --train 2
 
 ![loss curve](images/loss_curve.png)
 
+## SSD512 train environment 
+ NVIDA The GeForce&reg; GTX 1080 Ti, Batch size: 8, 480k iterations
+
 ## ToDo
 - Multi GPUs support
-
-## SSD512
- NVIDA The GeForce&reg; GTX 1080 Ti, Batch size: 8, 480k iterations
 
 ## References
 - [1]: Wei Liu, et al. "SSD: Single shot multibox detector" ECCV 2016.
