@@ -33,12 +33,14 @@ $ tar xf models_VGGNet_VOC0712_SSD_300x300.tar.gz
 $ ./caffe2npz.py models/VGGNet/VOC0712/SSD_300x300/VGG_VOC0712_SSD_300x300_iter_120000.caffemodel VGG_VOC0712_SSD_300.npz
 ```
 
-#### 3\.a Test with Pascal VOC dataset
+#### 3\.a Test and Eval with Pascal VOC dataset
 ```
 $ curl -LO http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
 $ tar xf VOCtest_06-Nov-2007.tar
 $ ./test.py [--arch 300] VGG_VOC0712_SSD_300.npz 2007-test [--gpu gpu]
 (result/comp4_det_test_*.txt will be generated)
+$ ./eval.py 2007-test
+(calculate unofficial mAP)
 ```
 
 #### 3\.b Test with an image
