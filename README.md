@@ -99,4 +99,3 @@ $ ./train.py --init VGG_ILSVRC_16_fc_reduced.npz --train 2007-trainval --train 2
 - [1]: Wei Liu, et al. "SSD: Single shot multibox detector" ECCV 2016.
 - [2]: [Original implementation](https://github.com/weiliu89/caffe/tree/ssd)
 - [3]: Cheng-Yang Fu, et al. "[DSSD : Deconvolutional Single Shot Detector](https://arxiv.org/abs/1701.06659)" arXiv 2017.
-- [4]: Batch size: 8, Iteration 43
