@@ -8,7 +8,7 @@ Pascal VOC2007 Test
 | Method | Original | Test only (model conversion) | Train and Test |
 |:-:|:-:|:-:|:-:|
 | SSD300 | 77.6 % | 77.5 % | 77.3 % |
-| SSD512 | 79.5 % [3] | 79.6 % | 80.4% [1](#ssd512-train-environment) |
+| SSD512 | 79.5 % [3] | 79.6 % | 80.4% [*](#ssd512-train-environment) |
 
 ## Requirements
 
