@@ -36,7 +36,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', default='VOCdevkit')
     parser.add_argument('--output', default='result')
-    parser.add_argument('--batchsize', type=int, default=32)
+    parser.add_argument('--batchsize', type=int, default=8)
     parser.add_argument('--gpu', type=int, default=-1)
     parser.add_argument('--arch', choices=('300', '512'), default='300')
     parser.add_argument('model')
@@ -44,9 +44,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.arch == '300':
-        model = SSD300(20)
+        model = SSD300(len(VOCDataset.labels))
     elif args.arch == '512':
-        model = SSD512(20)
+        model = SSD512(len(VOCDataset.labels))
     serializers.load_npz(args.model, model)
     if args.gpu >= 0:
         chainer.cuda.get_device(args.gpu).use()
@@ -64,7 +64,7 @@ if __name__ == '__main__':
     files = [
         open(
             os.path.join(
-                args.output, 'comp4_det_test_{:s}.txt'.format(label)),
+                args.output, 'comp4_det_{:s}_{:s}.txt'.format(subset, label)),
             mode='w')
         for label in VOCDataset.labels]
 
